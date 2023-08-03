@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { BiCoffeeTogo, BiQr, BiArrowBack } from "react-icons/bi";
-import '../scss/OrderPage.scss';
+import '../scss/pages/OrderPage.scss';
 
 const OrderPage = ({receipt, setReceipt}) => {
     const navigate = useNavigate();

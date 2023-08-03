@@ -1,5 +1,5 @@
 import React from 'react';
-import '../scss/IntroPage.scss';
+import '../scss/pages/IntroPage.scss';
 import Intro from '../assets/etc/Intro.jpeg';
 import Event from '../assets/etc/Event.jpeg';
 import Event2 from '../assets/etc/Event2.png';

@@ -1,0 +1,35 @@
+.SideMenuBar_Container {
+    display: flex;
+    flex-direction: column;
+
+
+    align-items: center;
+
+    border: 1px solid gray;
+
+    width : 150px;
+    height : 1920px;
+
+    //background
+    background-color: burlywood;
+    font-family: Roboto;
+    font-size: 42px;
+    font-weight: 600;
+}
+
+.SideMenuBar_btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width : 150px;
+    height : 200px;
+    font-size : 30px;
+
+    border: none;
+    background: none;
+
+    padding-top: 60px;
+    margin-top : 500px;
+}
