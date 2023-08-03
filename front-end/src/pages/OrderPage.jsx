@@ -27,7 +27,7 @@ const OrderPage = ({receipt, setReceipt}) => {
                     일반 주문
                 </button>
             </div>
-            <div className='OrderPage_Wrapper' style={{background:'lightgray'}}>
+            <div className='OrderPage_Wrapper' style={{background:'burlywood'}}>
                 <button className='OrderPage_Btn' name='QR' onClick={onBtnClick}>
                     <div name='QR' onClick={onBtnClick}>
                         <BiQr size={350} />
