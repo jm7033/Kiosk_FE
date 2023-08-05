@@ -1,28 +1,11 @@
-import React, {useEffect} from "react";
+import React from "react";
 import '../scss/components/Modal.scss';
  
 function Modal({closeModal, data}) {
-
-  useEffect(() => {
-    document.body.style.cssText = `
-      position: fixed; 
-      top: -${window.scrollY}px;
-      overflow-y: scroll;
-      width: 100%;`;
-    return () => {
-      const scrollY = document.body.style.top;
-      document.body.style.cssText = '';
-      window.scrollTo(0, parseInt(scrollY || '0', 10) * -1);
-    };
-  }, []);
-  
  
   return (
-    <div className="Modal" onClick={closeModal}>
+    <div className="Modal">
       <div className="modalBody" onClick={(e) => e.stopPropagation()}>
-        <button id="modalCloseBtn" onClick={closeModal}>
-          ✖
-        </button>
           <div>
               <img src={data.url} alt='' className='img'/>
               <div className='text'>
@@ -30,7 +13,8 @@ function Modal({closeModal, data}) {
                  <br/>
                 {data.price}원
               </div>
-              
+              <button onClick={closeModal}>취소하기</button>
+              <button>주문하기</button>
           </div>
       </div>
     </div>
