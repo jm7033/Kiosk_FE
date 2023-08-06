@@ -13,7 +13,7 @@
 .modalBody {
   position: absolute;
   width: 900px;
-  height: 1400px;
+  height: 1200px;
   background-color: rgb(255, 255, 255);
 
   border : none;
@@ -27,6 +27,10 @@
   font-style: normal;
   font-weight: 800;
   line-height: normal;
+
+  margin-top : 70px;
+  margin-left : 70px;
+  margin-bottom: 70px;;
 }
 
 .Modal_Container {
@@ -37,11 +41,16 @@
   font-style: normal;
   font-weight: 800;
   line-height: normal;
+
+  margin-bottom: 100px;
 }
 
 .Modal_Img {
   width : 350px;
   height : 500px;
+  border : 1px solid gray;
+  margin-left : 70px;
+  margin-right : 60px;
 }
 
 .Modal_Wrapper {
@@ -49,22 +58,104 @@
   flex-direction: column;
 }
 
+.Modal_Menu_Text {
+  font-size : 30px;
+  margin-bottom : 80px;
+}
+
 .Modal_Count{
   display: flex;
   flex-direction: row;
+  margin-bottom : 80px;
+
+  justify-content: center;
+  align-items: center;
 }
 
 .Modal_Count_Btn {
   display: flex;
   flex-direction: row;
+
+  width : 200px;
+  height : 80px;
+
+  font-size : 60px;
+
+  margin-left : 115px;
+  align-items: center;
+  justify-content: center;
+
+  border : none;
+  border-radius: 20px;
+  background-color: lightgray;
+
+  .countbutton:active{
+    background-color: gray;
+  }
+  
 }
 
 .Modal_Ice{
   display: flex;
   flex-direction: row;
+
+  justify-content: center;
+  align-items: center;
+
 }
 
 .Modal_Ice_Btn {
   display: flex;
   flex-direction: row;
+
+  width : 200px;
+  height : 80px;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-left : 90px;
+  border : none;
+  border-radius: 20px;
+  background-color: lightgray;
+}
+
+
+.Icebutton{
+  width: 33%;
+  height : 100%;
+  padding-top : 25%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.Icebutton:hover {
+  background-color: gray;
+  border-radius: 20px;
+}
+
+.Modal_Price {
+  margin-left : 620px;
+}
+
+.Modal_Btn {
+  display: flex;
+  flex-direction: row;
+  margin-top : 200px;
+  margin-left : 280px;
+}
+
+.Modal_Action_Btn {
+  font-family: Roboto;
+  font-size: 42px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+
+  border-radius: 40px;
+  border : none;
+
+  margin-left : 50px;
+  width: 250px;
+  height: 100px;
 }

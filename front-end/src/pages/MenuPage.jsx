@@ -4,11 +4,11 @@ import Menu from '../components/Menu';
 import '../scss/pages/MenuPage.scss';
 
 
-const MenuPage = ({receipt, setReceipt}) => {
+const MenuPage = ({receipt, setReceipt, cart, setCart}) => {
     return (
         <div className='MenuPage_Container'>
             <SideMenuBar />
-            <Menu />
+            <Menu cart={cart} setCart={setCart} />
         </div>
     );
 };

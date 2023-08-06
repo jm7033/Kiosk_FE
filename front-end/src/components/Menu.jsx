@@ -2,9 +2,10 @@ import React, {useState} from 'react';
 import { useParams } from 'react-router-dom';
 import { items } from '../components/common';
 import Modal from './Modal';
+import { useNavigate } from 'react-router-dom';
 import '../scss/components/Menu.scss';
 
-const Menu = () => {
+const Menu = ({cart, setCart}) => {
     const [isActive, setIsActive] = useState(false);
     const [modalData, setModalData] = useState(null);
     // 카테고리 별로 메뉴를 보여주기 위해
@@ -13,9 +14,31 @@ const Menu = () => {
     const params = useParams();
     const datas = params.category === undefined ? items : items.filter(item => item.type === params.category);
 
+    const navigate = useNavigate();
+
+    const onClick = () => {
+        navigate('/check');
+    }
+    const calculateCount = (cart) => {
+        let result = 0;
+        for(let i = 0; i < cart.length; i++){
+            result += cart[i].count;
+        }
+        return result;
+    }
+
+    const calculatePrice = (cart) => {
+        let result = 0;
+        for(let i = 0; i < cart.length; i++) {
+            result += (cart[i].price * cart[i].count);
+        }
+        return result;
+    }
+
     return (
         <div className='Menu_Container'>
-                { datas.map(data =>
+            <div className='Menu_Wrapper'>
+            { datas.map(data =>
                     <div key = {data.id} className='Menu_item' onClick={()=> {setIsActive(!isActive); setModalData(data);}}>
                         <img src={data.url} alt='' className='img'/>
                         <div className='text'>
@@ -23,9 +46,21 @@ const Menu = () => {
                             <br/>
                             {data.price}원
                         </div>
-                        { isActive && <Modal closeModal={()=>setIsActive(!isActive)} data={modalData}/>}
+                        { isActive && <Modal closeModal={()=>setIsActive(!isActive)} data={modalData} cart={cart} setCart={setCart}/>}
                     </div>
               )}
+            </div>
+            <div className='TotalPrice_Wrapper'>
+                <div className='TotalPrice_Component'>
+                    <div className='TotalPrice_Component_Text'>주문할 메뉴</div>
+                    <div className='TotalPrice_Component_CountText'>{calculateCount(cart)}</div>
+                </div>
+                <div className='TotalPrice_Component'>
+                    <div className='TotalPrice_Component_Text'>총 금액</div>
+                    <div>{calculatePrice(cart)}원</div>
+                </div>
+                <button onClick={onClick}>결제하기</button>
+            </div>
         </div>
     );
 };

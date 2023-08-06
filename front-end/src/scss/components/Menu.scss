@@ -1,9 +1,18 @@
 .Menu_Container {
     width : 930px;
-    height : 1700px;
+    height : 1920px;
 
     display: flex;
+    flex-direction: column;
+}
+
+.Menu_Wrapper {
+    display: flex;
     flex-direction: row;
+
+    width : 930px;
+    height : 1700px;
+
     flex-wrap: wrap;
     gap: 8px;;
     border-bottom: 4px solid black;
@@ -11,7 +20,6 @@
     overflow-y: auto;
     
     align-items: center;
-
 }
 
 .Menu_item {
@@ -35,5 +43,45 @@
         text-align: right;
         padding-top : 20px;
         padding-right : 20px;
+    }
+}
+
+// -----------------------------------------------------------------
+// TotalPirce_Container 
+.TotalPrice_Container {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.TotalPrice_Wrapper{
+    display: flex;
+    flex-direction: column;
+
+    width : 600px;
+    height : 200px;
+
+    border: 1px solid gray;
+    border-radius: 40px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.TotalPrice_Component{
+    display: flex;
+    flex-direction: row;
+    .TotalPrice_Component_Text {
+        font-size : 30px;
+    }
+
+    .TotalPrice_Component_CountText {
+        font-size: 20px;
     }
 }
