@@ -1,0 +1,74 @@
+
+.icon-container {
+  position: relative;
+  width: 480px;
+  height: 1920px;
+  background-color: rgb(202, 202, 202); 
+}
+
+.icon-left-bottom {
+  //position: absolute;
+  //display:flex;
+  margin: 700px 90px;
+  //left: 90px;
+  //top: 650px;
+}
+
+.text1 {
+  position: absolute;
+  font-size: 40px;
+  font-weight: bolder;
+  left: 40px;
+  top: 150px;
+}
+
+.text2 {
+  position: absolute;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  left: 25%;
+  top: 620px;
+}
+
+.text3 {
+  position: absolute;
+  font-size: 20px;
+  font-weight: normal;
+  text-align: center;
+  left: 20%;
+  top: 970px;
+  line-height: 2em;
+}
+
+.text4 {
+  position: absolute;
+  font-size: 15px;
+  font-weight: normal;
+  text-align: center;
+  left: 32%;
+  top: 1060px;
+  line-height: 2em;
+}
+
+.text5 {
+  position: absolute;
+  font-size: 20px;
+  font-weight: bold;
+  left: 655px;
+  top: 620px;
+  white-space: nowrap; // 가로로 텍스트 배치
+}
+
+
+.number-pad {
+  position: absolute;
+  left: 600px;
+  top: 700px;
+}
+
+.button {
+  position: absolute;
+  left:520px;
+  top:1780px;
+}

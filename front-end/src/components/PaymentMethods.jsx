@@ -1,0 +1,74 @@
+import React from 'react';
+import '../css/PaymentMethods.scss';
+import {MdOutlinePayment} from 'react-icons/md';
+import kakao from '../assets/kakao.png';
+import toss from '../assets/toss.png';
+import naver from '../assets/naver.png';
+import payco from '../assets/payco.png';
+import coupone from '../assets/coupone.png';
+
+
+const PaymentMethods = ({ onSelectPayment }) => {
+  const handlePaymentSelection = (method) => {
+    if (onSelectPayment) {
+      onSelectPayment(method);
+    }
+  };
+
+  return (
+    <div>
+      <div className="method-container"> 
+        <div className="ptext">
+          <p>결제수단 선택</p>
+        </div>
+        <div className="ptext1">
+          <p>카드 결제</p>
+        </div>
+        <div className="ptext2">
+          <p>간편 결제</p>
+        </div>
+        <div className="ptext3">
+          <p>기타 결제</p>
+        </div>
+      </div>
+      <div className="card-methods">
+        <button onClick={() => handlePaymentSelection('card')}>
+          <MdOutlinePayment className="icon" size={150}  alt="card" />
+          <p className="card-methods-text">카드 결제</p>
+        </button>
+      </div>
+      <div className="payment-methods">
+        <button onClick={() => handlePaymentSelection('kakao')}>
+            <img src={kakao} alt="kakao" />
+            <p className="payment-methods-text1">카카오페이</p>
+        </button>
+      </div>
+      <div className="payment-methods2">
+        <button onClick={() => handlePaymentSelection('toss')}>
+            <img src={toss} alt="toss" />
+            <p className="payment-methods-text2">토스페이</p>
+        </button>
+      </div>
+      <div className="payment-methods3">
+        <button onClick={() => handlePaymentSelection('naver')}>
+            <img src={naver} alt="naver" />
+            <p className="payment-methods-text3">네이버페이</p>
+        </button>
+      </div>
+      <div className="payment-methods4">
+        <button onClick={() => handlePaymentSelection('payco')}>
+            <img src={payco} alt="payco" />
+            <p className="payment-methods-text4">페이코</p>
+        </button>
+      </div>
+      <div className="payment-methods5">
+        <button onClick={() => handlePaymentSelection('coupone')}>
+            <img src={coupone} alt="coupone" />
+            <p className="payment-methods-text5">쿠폰사용</p>
+        </button>
+      </div>
+    </div>
+  );
+};
+
+export default PaymentMethods;
