@@ -1,11 +1,11 @@
 import React from 'react';
-import '../css/PaymentMethods.scss';
+import '../scss/components/PaymentMethods.scss';
 import {MdOutlinePayment} from 'react-icons/md';
-import kakao from '../assets/kakao.png';
-import toss from '../assets/toss.png';
-import naver from '../assets/naver.png';
-import payco from '../assets/payco.png';
-import coupone from '../assets/coupone.png';
+import kakao from '../assets/payment/kakao.png';
+import toss from '../assets/payment/toss.png';
+import naver from '../assets/payment/naver.png';
+import payco from '../assets/payment/payco.png';
+import coupone from '../assets/payment/coupone.png';
 
 
 const PaymentMethods = ({ onSelectPayment }) => {

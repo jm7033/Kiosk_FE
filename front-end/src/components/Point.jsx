@@ -1,5 +1,5 @@
 import React from 'react';
-import '../css/Point.scss';
+import '../scss/components/Point.scss';
 import { FcPhoneAndroid } from 'react-icons/fc';
 import TwoButtons from './TwoButtons';
 import NumberPad from './NumberPad';

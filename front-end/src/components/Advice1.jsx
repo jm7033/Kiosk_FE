@@ -1,6 +1,6 @@
 import React from 'react';
-import '../css/Advice1.scss';
-import cardinput from '../assets/cardinput.png';
+import '../scss/components/Advice1.scss';
+import cardinput from '../assets/payment/cardinput.png';
 
 const Advice1 = () => {
     return (

@@ -1,6 +1,6 @@
 import React from 'react';
 import Point from '../components/Point';
-import '../css/Point.scss';
+import '../scss/components/Point.scss';
 
 function PointPage() {
   return (

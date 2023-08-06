@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../css/NumberPad.scss';
+import '../scss/components/NumberPad.scss';
 
 const NumberPad = () => {
   const [inputValue, setInputValue] = useState('           010-');

@@ -5,6 +5,10 @@ const IntroPage = lazy(() => import('./pages/IntroPage'));
 const OrderPage = lazy(() => import('./pages/OrderPage'));
 const MenuPage = lazy(() => import('./pages/MenuPage'));
 const CheckPage = lazy(() => import('./pages/CheckPage'));
+const PaymentPage = lazy(() => import('./pages/PaymentPage'));
+const PointPage = lazy(() => import('./pages/PointPage'));
+const AdvicePage = lazy(() => import('./pages/AdvicePage'));
+const AdvicePage2 = lazy(() => import('./pages/AdvicePage2'));
 
 const App = () => {
 
@@ -26,6 +30,10 @@ const App = () => {
             <Route path='/menu' element={<MenuPage receipt={receipt} setReceipt={setReceipt} cart={cart} setCart={setCart}/>}/>
             <Route path = "menu/:category" element={<MenuPage receipt={receipt} setReceipt={setReceipt} cart={cart} setCart={setCart}/>}/>
             <Route path = "/check" element={<CheckPage receipt={receipt} setReceipt={setReceipt} cart={cart} setCart={setCart}/>}/>
+            <Route path = "/purchase" element={<PaymentPage />}/>
+            <Route path = "/point" element={<PointPage />}/>
+            <Route path='/advice' element={<AdvicePage />}/>
+            <Route path="/advice2" element={<AdvicePage2 />}/>
         </Routes>
       </Suspense>
     </BrowserRouter>

@@ -1,14 +1,11 @@
-// import React from 'react';
+import React from 'react';
 
-// const CheckPage = ({receipt, setReceipt, cart, setCart}) => {
-//     return (
-//         <div>
-//             ㅎㅇ
-//         </div>
-//     );
-// };
+const CheckPage = ({receipt, setReceipt, cart, setCart}) => {
+    return (
+        <div>
+            ㅎㅇ
+        </div>
+    );
+};
 
-// export default CheckPage;
-
-
-export default Test;
+export default CheckPage;
