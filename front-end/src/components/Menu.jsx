@@ -50,16 +50,18 @@ const Menu = ({cart, setCart}) => {
                     </div>
               )}
             </div>
-            <div className='TotalPrice_Wrapper'>
-                <div className='TotalPrice_Component'>
-                    <div className='TotalPrice_Component_Text'>주문할 메뉴</div>
-                    <div className='TotalPrice_Component_CountText'>{calculateCount(cart)}</div>
+            <div className='TotalPrice_Container'>
+                <div className='TotalPrice_Wrapper'>
+                    <div className='TotalPrice_Component'>
+                        <div className='TotalPrice_Component_Text'>주문할 메뉴</div>
+                        <div className='TotalPrice_Component_CountText'>{calculateCount(cart)}</div>
+                    </div>
+                    <div className='TotalPrice_Component'>
+                        <div className='TotalPrice_Component_Text'>총 금액</div>
+                        <div>{calculatePrice(cart)}원</div>
+                    </div>
                 </div>
-                <div className='TotalPrice_Component'>
-                    <div className='TotalPrice_Component_Text'>총 금액</div>
-                    <div>{calculatePrice(cart)}원</div>
-                </div>
-                <button onClick={onClick}>결제하기</button>
+                <button onClick={onClick} className='TotalPrice_Btn'>결제하기</button>
             </div>
         </div>
     );

@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 const IntroPage = lazy(() => import('./pages/IntroPage'));
 const OrderPage = lazy(() => import('./pages/OrderPage'));
 const MenuPage = lazy(() => import('./pages/MenuPage'));
+const CheckPage = lazy(() => import('./pages/CheckPage'));
 
 const App = () => {
 
@@ -24,6 +25,7 @@ const App = () => {
             <Route path='/order' element={<OrderPage receipt={receipt} setReceipt={setReceipt}/>}/>
             <Route path='/menu' element={<MenuPage receipt={receipt} setReceipt={setReceipt} cart={cart} setCart={setCart}/>}/>
             <Route path = "menu/:category" element={<MenuPage receipt={receipt} setReceipt={setReceipt} cart={cart} setCart={setCart}/>}/>
+            <Route path = "/check" element={<CheckPage receipt={receipt} setReceipt={setReceipt} cart={cart} setCart={setCart}/>}/>
         </Routes>
       </Suspense>
     </BrowserRouter>
