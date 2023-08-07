@@ -26,9 +26,20 @@ const AdvicePage2 = () => {
     }, 2000);
 
     return () => {
-      clearTimeout(timer);
+      clearTimeout(timer); 
     };
   }, []);
+
+  useEffect(() => {
+    const goHome = setTimeout(() => {
+      setShowModal(false);
+      navigate('/');
+    }, 7000);
+
+    return () => {
+      clearTimeout(goHome);
+    }
+  })
 
   return (
     <div>
