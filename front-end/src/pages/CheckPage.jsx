@@ -12,6 +12,7 @@ const CheckPage = ({receipt, setReceipt, cart, setCart}) => {
         }
         return result;
     }
+
     return (
         <div className='CheckPage_Container'>
             {console.log(cart)}
@@ -27,7 +28,9 @@ const CheckPage = ({receipt, setReceipt, cart, setCart}) => {
                         <div>{data.option}</div>
                     </div>
                     <div>
-
+                        <div onClick={data => (data.count - 1)} className="countbutton">-</div>
+                        <div style={{marginLeft:'40px', marginRight:'40px', fontSize: '30px'}}>{data.count}</div>
+                        <div onClick={data => data.count +1} className="countbutton">+</div>
                     </div>
                 </div>
             )}

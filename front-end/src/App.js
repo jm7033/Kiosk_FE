@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 const IntroPage = lazy(() => import('./pages/IntroPage'));
 const OrderPage = lazy(() => import('./pages/OrderPage'));
+const QrReaderPage = lazy(() => import('./pages/QrReaderPage'));
 const MenuPage = lazy(() => import('./pages/MenuPage'));
 const CheckPage = lazy(() => import('./pages/CheckPage'));
 const PaymentPage = lazy(() => import('./pages/PaymentPage'));
@@ -27,13 +28,14 @@ const App = () => {
         <Routes>
             <Route path='/' element={<IntroPage receipt={receipt} setReceipt={setReceipt}/>}/>
             <Route path='/order' element={<OrderPage receipt={receipt} setReceipt={setReceipt}/>}/>
+            <Route path='/reader' element={<QrReaderPage cart = {cart} setCart = {setCart}/>}/>
             <Route path='/menu' element={<MenuPage receipt={receipt} setReceipt={setReceipt} cart={cart} setCart={setCart}/>}/>
             <Route path = "menu/:category" element={<MenuPage receipt={receipt} setReceipt={setReceipt} cart={cart} setCart={setCart}/>}/>
             <Route path = "/check" element={<CheckPage receipt={receipt} setReceipt={setReceipt} cart={cart} setCart={setCart}/>}/>
             <Route path = "/purchase" element={<PaymentPage />}/>
             <Route path = "/point" element={<PointPage />}/>
             <Route path='/advice' element={<AdvicePage />}/>
-            <Route path="/advice2" element={<AdvicePage2 />}/>
+            <Route path="/advice2" element={<AdvicePage2 receipt={receipt} cart={cart}/>}/>
         </Routes>
       </Suspense>
     </BrowserRouter>

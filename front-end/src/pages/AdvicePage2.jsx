@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
+import QRCode from "react-qr-code";
 import { useNavigate } from "react-router-dom";
 import Advice2 from "../components/Advice2";
 import "../scss/components/Modal2.scss";
 
-const AdvicePage2 = () => {
+const AdvicePage2 = ({receipt, cart}) => {
 
   const navigate = useNavigate();
 
@@ -41,6 +42,8 @@ const AdvicePage2 = () => {
     }
   })
 
+  const utf8EncodedArray = cart.map(value => encodeURIComponent(value));
+
   return (
     <div>
       <Advice2 />
@@ -54,6 +57,13 @@ const AdvicePage2 = () => {
               발급된 대기번호를 확인해 주세요
             </p>
             <div className="modal-text5">{queueNumber}</div>
+            <div style={{ height: "auto", margin: "80px 180px 0 0", maxWidth: 64, width: "100%" }}>
+              <QRCode
+                style={{ height: "256px", width: "256px" }}
+                value={JSON.stringify(utf8EncodedArray)}
+                viewBox={`0 0 256 256`}
+              />
+            </div>
           </div>
         </div>
       )}

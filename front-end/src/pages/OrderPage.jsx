@@ -9,7 +9,7 @@ const OrderPage = ({receipt, setReceipt}) => {
     const onBtnClick = (e) => {
         e.target.name === 'Basic' ? receipt.type = 'Basic' : receipt.type = 'QR';
         console.log(e.target.name);
-        receipt.type === 'Basic' ? navigate('/menu') : navigate('/check');
+        receipt.type === 'Basic' ? navigate('/menu') : navigate('/reader');
         console.log(receipt);
     }
 

@@ -17,7 +17,7 @@ const Menu = ({cart, setCart}) => {
     const navigate = useNavigate();
 
     const onClick = () => {
-        navigate('/check');
+        navigate('/advice2');
     }
     const calculateCount = (cart) => {
         let result = 0;
