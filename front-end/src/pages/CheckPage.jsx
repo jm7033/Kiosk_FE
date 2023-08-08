@@ -43,4 +43,4 @@ const CheckPage = ({receipt, setReceipt, cart, setCart}) => {
     );
 };
 
-export default React.memo(CheckPage);
+export default CheckPage;
