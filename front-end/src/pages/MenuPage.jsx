@@ -9,6 +9,7 @@ const MenuPage = ({receipt, setReceipt, cart, setCart}) => {
         <div className='MenuPage_Container'>
             <SideMenuBar />
             <Menu cart={cart} setCart={setCart} />
+            {console.log(cart)}
         </div>
     );
 };

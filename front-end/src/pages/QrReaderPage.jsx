@@ -1,22 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { QrReader } from 'react-qr-reader';
 
-const Test = (props) => {
-  const [data, setData] = useState('');
+const Test = ({cart, setCart}) => {
+  const [data, setData] = useState('No result');
+  const navigate = useNavigate();
+
 
   return (
     <>
       <QrReader
         onResult={(result, error) => {
           if (!!result) {
-            const jsonString = result?.text;
-
-            if (isJSON(jsonString)) {
-              setData(jsonString);
-            } else {
-              console.info('The data is not JSON');
-              setData(JSON.stringify(result?.text));
-            }
+            setData(result?.text);
           }
 
           if (!!error) {
@@ -25,18 +21,9 @@ const Test = (props) => {
         }}
         style={{ width: '100%' }}
       />
-      <p>{JSON.parse(data)}</p>
+      <p>{data !== undefined && navigate('/check')}</p>
     </>
   );
-};
-
-const isJSON = (str) => {
-  try {
-    JSON.parse(str);
-    return true;
-  } catch (e) {
-    return false;
-  }
 };
 
 export default Test;

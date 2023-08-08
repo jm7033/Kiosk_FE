@@ -42,13 +42,14 @@ const AdvicePage2 = ({receipt, cart}) => {
     }
   })
 
-  const utf8EncodedArray = cart.map(value => encodeURIComponent(value));
+  const value = JSON.stringify(cart);
 
   return (
     <div>
       <Advice2 />
       {showModal && (
         <div className="modal2">
+          
           <div className="modal-content2">
             <p className="modal-text3">
               감사합니다.<br />결제가 완료되었습니다!
@@ -60,9 +61,10 @@ const AdvicePage2 = ({receipt, cart}) => {
             <div style={{ height: "auto", margin: "80px 180px 0 0", maxWidth: 64, width: "100%" }}>
               <QRCode
                 style={{ height: "256px", width: "256px" }}
-                value={JSON.stringify(utf8EncodedArray)}
+                value={value}
                 viewBox={`0 0 256 256`}
               />
+              {console.log(value)}
             </div>
           </div>
         </div>

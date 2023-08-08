@@ -15,7 +15,7 @@ const CheckPage = ({receipt, setReceipt, cart, setCart}) => {
 
     return (
         <div className='CheckPage_Container'>
-            {console.log(cart)}
+            {console.log(datas)}
             {/* Text */}
             <div className='CheckPage_Text'>주문을 확인해주세요</div>
             {/* Menu */}
@@ -43,4 +43,4 @@ const CheckPage = ({receipt, setReceipt, cart, setCart}) => {
     );
 };
 
-export default CheckPage;
+export default React.memo(CheckPage);
