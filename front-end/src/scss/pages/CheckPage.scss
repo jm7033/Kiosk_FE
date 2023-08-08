@@ -1,0 +1,38 @@
+.CheckPage_Container {
+    width: 1080px;
+    height : 1920px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.CheckPage_Text {
+    font-family: Roboto;
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.CheckPage_Wrapper {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.CheckPage_Items {
+    display: flex;
+    flex-direction: row;
+
+    .Items_img{
+        width: 300px;
+        height : 300px;
+    }
+    .Items_Menu_Text {
+        font-family: Roboto;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+}
